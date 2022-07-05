@@ -24,7 +24,7 @@ __declspec(naked) void entry_point()
         call main::initialize
 
 		// same address as entry_point_hook.initialize
-        mov eax, 5C4299h
+        mov eax, 5D92E3h
         jmp eax
     }
 }
@@ -34,7 +34,7 @@ BOOL APIENTRY DllMain(HMODULE /*hModule*/, DWORD  ul_reason_for_call, LPVOID /*l
 	if (ul_reason_for_call == DLL_PROCESS_ATTACH)
 	{
 		DWORD oldProtect;
-		VirtualProtect(GetModuleHandle(nullptr), 0x234D000, PAGE_EXECUTE_READWRITE, &oldProtect); // find this with CFF Explorer - Optinal Headers - SizeOfImage
+		VirtualProtect(GetModuleHandle(nullptr), 0x257A000, PAGE_EXECUTE_READWRITE, &oldProtect); // find this with CFF Explorer - Optinal Headers - SizeOfImage
 
 		Beep(523, 100);
 
