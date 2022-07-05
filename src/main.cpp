@@ -39,7 +39,7 @@ BOOL APIENTRY DllMain(HMODULE /*hModule*/, DWORD  ul_reason_for_call, LPVOID /*l
 		Beep(523, 100);
 
 		// Adress is the entry adress found in IDA under Exports
-		main::entry_point_hook.initialize(0x5C4299, entry_point)->install();
+		main::entry_point_hook.initialize(0x5D92E3, entry_point)->install(); //This is the entry point for the Linkermod Bo1 Radiant
 	}
 
 	else if (ul_reason_for_call == DLL_PROCESS_DETACH)
