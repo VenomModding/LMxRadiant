@@ -112,14 +112,14 @@ ___
 
 <br>
 
-1. Install the CoD4 Modtools
-2. Download the latest [release](https://github.com/xoxor4d/iw3xo-radiant/releases)
+1. Install the Bo1 Modtools
+2. Download the latest [release](https://github.com/VenomModding/T5xRadiant/releases)
 3. Copy the contents into your cod4 root directory
-4. Start `bin/IW3xRadiant.exe`
+4. Start `bin/T5xRadiant.exe`
 
-- [NIGHTLY]&ensp; &ensp; install latest release, download nightly, unpack and replace `iw3r.dll` within the `bin` folder  
-  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; -> check for additional assets in the __#nightly-builds__ channel (📍) on the [iw3xo discord](https://discord.gg/t5jRGbj)
-- [OPTIONAL]&ensp; __bo3-tool-textures.zip__ (unpack and place `.iwi's` into `bin\IW3xRadiant\images`)
+- [NIGHTLY]&ensp; &ensp; install latest release, download nightly, unpack and replace `t5xr.dll` within the `bin` folder  
+  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; -> check for additional assets in the __#nightly-builds__ channel (📍) on the [Venom Modding discord](https://discord.gg/QuNcjXbsqY)
+- [OPTIONAL]&ensp; __bo3-tool-textures.zip__ (unpack and place `.iwi's` into `bin\T5xRadiant\images`)
 
 <br>
 
@@ -130,14 +130,14 @@ ___
 
 ### How to build / compile the project using Visual Studio
 1. Clone the repo! __(zip does not include deps!)__
-2. Copy everything within the assets folder into your cod4-root folder
+2. Copy everything within the assets folder into your bo1-root folder
 3. Use __update_submodules.bat__ to update submodules
 4. Use __generate-buildfiles.bat__ to build project files with premake
-5. Load the solution `(build/iw3xo-radiant.sln)` and open the iw3r project-settings to setup paths:
-> - General &ensp; &ensp; &ensp; output directory path -> `path-to-cod4-root\bin\`
-> - Debugging &ensp; command -> `path-to-cod4-root\bin\IW3xRadiant.exe`
-> - Debugging &ensp; working directory -> `path-to-cod4-root\bin\`
-> + Preferred: Create a new environment variable called `COD4_ROOT` that points to your cod4 directory and re-generate the project files.  
+5. Load the solution `(build/t5x-radiant.sln)` and open the iw3r project-settings to setup paths:
+> - General &ensp; &ensp; &ensp; output directory path -> `path-to-bo1-root\bin\`
+> - Debugging &ensp; command -> `path-to-bo1-root\bin\T5xRadiant.exe`
+> - Debugging &ensp; working directory -> `path-to-bo1-root\bin\`
+> + Preferred: Create a new environment variable called `BO1_ROOT` that points to your bo1 directory and re-generate the project files.  
 6. Build -> Build Solution or run with debugger  
 
 <br>
@@ -146,17 +146,17 @@ ___
 1. Install C++ Build tools (msbuild)
 2. Add msbuild folder to the "PATH" environment variable:
 > `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin`
-3. Add `COD4_ROOT` environment variable with path to your cod4 directory 
-> `"COD4_ROOT" "D:\COD4-Modtools"`
+3. Add `BO1_ROOT` environment variable with path to your bo1 directory 
+> `"BO1_ROOT" "D:\BO1-Modtools"`
 4. Clone the repo (zip does not include deps!)
-5. Copy everything within the assets folder into your cod4-root folder
+5. Copy everything within the assets folder into your bo1-root folder
 6. Drag and drop all files from `.vscode/tracked\` into `.vscode\`
-7. Open __iw3xo-radiant.code-workspace__ 
+7. Open __t5x-radiant.code-workspace__ 
 8. Run task: `update_submodules` or open __update_submodules.bat__
 9. Run task: `generate-buildfiles` or open __generate-buildfiles.bat__
 
-Use provided build-tasks with the option to copy `iw3r.dll` and `iw3r.pdb` to `%COD4_ROOT%/bin`  
-__Run->Start Debugging__ will build and copy a debug build to to `%COD4_ROOT%/bin` and launch IW3xRadiant.
+Use provided build-tasks with the option to copy `T5xr.dll` and `T5xr.pdb` to `%BO1_ROOT%/bin`  
+__Run->Start Debugging__ will build and copy a debug build to to `%BO1_ROOT%/bin` and launch IW3xRadiant.
 
 <br>
 
@@ -165,6 +165,7 @@ ___
 <br>
 
 ### Optional:  
+https://github.com/VenomModding/t5xo-dev
 https://github.com/xoxor4d/iw3xo-dev
 
 ### Project Page:  
