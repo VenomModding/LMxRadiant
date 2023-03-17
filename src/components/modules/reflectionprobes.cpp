@@ -32,7 +32,7 @@ namespace components
 			dvars::fs_homepath)
 		{
 			std::string filePath = dvars::fs_homepath->current.string;
-			filePath += R"(\IW3xRadiant\reflection_probes\)";
+			filePath += R"(\T5xRadiant\reflection_probes\)";
 
 			std::filesystem::create_directories(filePath);
 			filePath += filename + ".tga"s;
@@ -808,7 +808,7 @@ namespace components
 			/* name		*/ "r_reflectionprobe_export_tga",
 			/* default	*/ false,
 			/* flags	*/ game::dvar_flags::none,
-			/* desc		*/ "export all reflection probes as tga files when building reflections (bin/IW3xRadiant/reflection_probes)");
+			/* desc		*/ "export all reflection probes as tga files when building reflections (bin/T5xRadiant/reflection_probes)");
 	}
 
 	reflectionprobes::reflectionprobes()

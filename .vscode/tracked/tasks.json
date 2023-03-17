@@ -45,7 +45,7 @@
             "label": "debug-build",
             "command": "msbuild.exe",
             "args": [
-              "build/iw3xo-radiant.sln",
+              "build/t5xo-radiant.sln",
               "/p:Configuration=Debug;Platform=Win32",
             ],
             "problemMatcher": "$msCompile",
@@ -61,7 +61,7 @@
             "label": "release-build",
             "command": "msbuild.exe",
             "args": [
-              "build/iw3xo-radiant.sln",
+              "build/t5xo-radiant.sln",
               "/p:Configuration=Release;Platform=Win32",
             ],
             "problemMatcher": ["$msCompile"],
@@ -72,22 +72,22 @@
         // *
         // copy to dir
 
-        // debug: copy build to cod4/bin
+        // debug: copy build to bo1/bin
         {
             "type": "shell",
             "label": "z-copy-debug",
-            "command": "copy-to-cod4-dir.bat",
+            "command": "copy-to-bo1-dir.bat",
             "options": 
             {
                 "cwd": "${workspaceFolder}\\.vscode"
             },
             "args": ["debug"],
         },
-        // release: copy build to cod4/bin
+        // release: copy build to bo1/bin
         {
             "type": "shell",
             "label": "z-copy-release",
-            "command": "copy-to-cod4-dir.bat",
+            "command": "copy-to-bo1-dir.bat",
             "options": 
             {
                 "cwd": "${workspaceFolder}\\.vscode"

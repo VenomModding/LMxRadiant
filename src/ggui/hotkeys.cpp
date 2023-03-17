@@ -22,7 +22,7 @@ namespace ggui
 		if (const auto& fs_homepath = game::Dvar_FindVar("fs_homepath");
 						fs_homepath)
 		{
-			const char* apply_hint = utils::va("Could not find file 'hotkeys.ini' in\n'%s/IW3xRadiant'.", fs_homepath->current.string);
+			const char* apply_hint = utils::va("Could not find file 'hotkeys.ini' in\n'%s/T5xRadiant'.", fs_homepath->current.string);
 			ImGui::SetCursorPosX((ImGui::GetWindowWidth() - ImGui::CalcTextSize(apply_hint).x) * 0.5f);
 			ImGui::SetCursorPosY(ImGui::GetCursorPosY() + ImGui::GetWindowHeight() * 0.5f - ImGui::CalcTextSize(apply_hint).y);
 			ImGui::TextUnformatted(apply_hint);
@@ -300,7 +300,7 @@ namespace ggui
 		cmd_hotkeys.clear();
 
 		std::ifstream ini;
-		if (utils::fs::open_file_homepath("IW3xRadiant", file, false, ini))
+		if (utils::fs::open_file_homepath("T5xRadiant", file, false, ini))
 		{
 			std::string input;
 			std::vector<std::string> args;
@@ -368,7 +368,7 @@ namespace ggui
 		}
 
 		game::printf_to_console("[ERR][Hotkeys] Failed to find 'hotkeys.ini'\n");
-		game::printf_to_console("[ERR] ^ will be created upon closing radiant with default bindings. Please consider using the ini file that came with iw3xo-radiant.\n");
+		game::printf_to_console("[ERR] ^ will be created upon closing radiant with default bindings. Please consider using the ini file that came with t5xo-radiant.\n");
 		return false;
 	}
 
@@ -754,7 +754,7 @@ namespace ggui
 		}
 
 		std::ofstream ini;
-		if (utils::fs::write_file_homepath("IW3xRadiant", "hotkeys.ini", false, ini))
+		if (utils::fs::write_file_homepath("T5xRadiant", "hotkeys.ini", false, ini))
 		{
 			ini << "[Commands]" << std::endl;
 

@@ -67,17 +67,17 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "CompanyName", ""
+            VALUE "CompanyName", "Gungnir Studios LLC"
 #ifdef _DEBUG
-            VALUE "FileDescription", "Radiant modification built for IW3xo"
+            VALUE "FileDescription", "Radiant modification built for T5xo-dev"
 #else
-            VALUE "FileDescription", "Radiant modification built for IW3xo"
+            VALUE "FileDescription", "Radiant modification built for T5xo-dev"
 #endif
             VALUE "FileVersion", VERSION_FILE
-            VALUE "InternalName", "iw3r"
-            VALUE "LegalCopyright", "xoxor4d.github.io"
-            VALUE "OriginalFilename", "iw3r.dll"
-            VALUE "ProductName", "IW3xRadiant"
+            VALUE "InternalName", "t5xr"
+            VALUE "LegalCopyright", "Copyright (C) 2023 Gungnir Studios LLC"
+            VALUE "OriginalFilename", "t5xr.dll"
+            VALUE "ProductName", "T5xRadiant"
             VALUE "ProductVersion", VERSION_PRODUCT
         END
     END

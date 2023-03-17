@@ -296,7 +296,7 @@ BOOL init_threads()
 	// discord rich presence
 	CreateThread(nullptr, 0, discord_rpc, nullptr, 0, nullptr);
 
-	// check for iw3xradiant updates
+	// check for t5xradiant updates
 	CreateThread(nullptr, 0, update_check, nullptr, 0, nullptr);
 
 	game::glob::command_thread_running = false;
@@ -316,7 +316,7 @@ BOOL init_threads()
 		freopen_s(&file, "CONOUT$", "w", stdout);
 		freopen_s(&file, "CONOUT$", "w", stderr);
 
-		SetConsoleTitleA("IW3xRadiant Console");
+		SetConsoleTitleA("T5xRadiant Console");
 	}
 	
 	return TRUE;
@@ -325,12 +325,12 @@ BOOL init_threads()
 
 namespace components
 {
-	void add_iw3xradiant_searchpath()
+	void add_t5xradiant_searchpath()
 	{
 		if(const auto fs_basepath = game::Dvar_FindVar("fs_basepath"); 
 			fs_basepath)
 		{
-			game::FS_ScanForDir("bin/IW3xRadiant", fs_basepath->current.string, false);
+			game::FS_ScanForDir("bin/T5xRadiant", fs_basepath->current.string, false);
 		}
 		
 	}
@@ -344,7 +344,7 @@ namespace components
 			call	Com_Printf_Func;
 			
 			pushad;
-			call	add_iw3xradiant_searchpath;
+			call	add_t5xradiant_searchpath;
 			popad;
 
 			jmp		retn_pt;
@@ -456,7 +456,7 @@ namespace components
 		// *
 		// *
 
-		// add iw3xradiant search path (imgui images)
+		// add t5xradiant search path (imgui images)
 		utils::hook(0x4A29A7, fs_scan_base_directory_stub, HOOK_JUMP).install()->quick();
 
 		// set max undo memory

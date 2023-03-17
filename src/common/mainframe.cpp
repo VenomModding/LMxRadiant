@@ -203,7 +203,7 @@ void __declspec(naked) hk_on_createclient()
 	}
 }
 
-// auto load iw3xradiant.prj
+// auto load t5xradiant.prj
 void create_qe_children(cmainframe* mainframe)
 {
 	char app_path[_MAX_PATH + 1];
@@ -216,7 +216,7 @@ void create_qe_children(cmainframe* mainframe)
 
 	if(!bProjectLoaded)
 	{
-		game::Com_Error("Unable to load project file <iw3xradiant.prj>");
+		game::Com_Error("Unable to load project file <t5xradiant.prj>");
 	}
 
 	auto* m_camera_origin = reinterpret_cast<float*>(0x241A5A4);
@@ -882,7 +882,7 @@ void cmainframe::hooks()
 	// handle wm_char events for non-focused subwindows
 	utils::hook(0x421A7B, cmainframe::windowproc, HOOK_CALL).install()->quick();
 
-	// automatically load iw3xradiant.prj
+	// automatically load t5xradiant.prj
 	utils::hook(0x422984, hk_create_qe_children_stub, HOOK_JUMP).install()->quick();
 
 	// hook end of createclient

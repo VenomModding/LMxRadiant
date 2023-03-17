@@ -212,9 +212,9 @@ end
 
 dependencies.load()
 
-workspace "iw3xo-radiant"
+workspace "T5xRadiant"
 
-	startproject "iw3r"
+	startproject "t5xr"
 	location "./build"
 	objdir "%{wks.location}/obj"
 	targetdir "%{wks.location}/bin/%{cfg.buildcfg}"
@@ -283,7 +283,7 @@ workspace "iw3xo-radiant"
 
 	-- Project
 
-	project "iw3r"
+	project "t5xr"
 		kind "SharedLib"
 		language "C++"
 
@@ -313,11 +313,11 @@ workspace "iw3xo-radiant"
             "/Zm100 -Zm100" 
         }
 
-		if(os.getenv("COD4_ROOT")) then
-			print ("Setup paths using environment variable 'COD4_ROOT' :: '" .. os.getenv("COD4_ROOT") .. "'")
-			targetdir(os.getenv("COD4_ROOT") .. "/bin/")
-			debugdir (os.getenv("COD4_ROOT") .. "/bin/")
-			debugcommand (os.getenv("COD4_ROOT") .. "/bin/" .. "IW3xRadiant.exe")
+		if(os.getenv("BO1_ROOT")) then
+			print ("Setup paths using environment variable 'BO1_ROOT' :: '" .. os.getenv("BO1_ROOT") .. "'")
+			targetdir(os.getenv("BO1_ROOT") .. "/bin/")
+			debugdir (os.getenv("BO1_ROOT") .. "/bin/")
+			debugcommand (os.getenv("BO1_ROOT") .. "/bin/" .. "T5xRadiant.exe")
 		end
 
         -- Specific configurations

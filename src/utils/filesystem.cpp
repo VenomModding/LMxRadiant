@@ -71,7 +71,7 @@ namespace utils::fs
 	}
 
 	/**
-	 * @return	cod4 root path
+	 * @return	bo1 root path
 	 */
 	std::string get_basepath()
 	{

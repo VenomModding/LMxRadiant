@@ -94,7 +94,7 @@ namespace components
 
 	void DECLSPEC_NORETURN on_invalid_hwnd_assert()
 	{
-		game::Com_Error("Failed to initialize renderer. This might indicate that you have not installed the cod4 modtools or are missing parts of it.\n");
+		game::Com_Error("Failed to initialize renderer. This might indicate that you have not installed the bo1 modtools or are missing parts of it.\n");
 		exit(0);
 	}
 
