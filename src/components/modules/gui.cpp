@@ -60,7 +60,7 @@ namespace components
 		io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;           // Enable Docking
 		//io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;			// Enable Multi-Viewport / Platform Windows
 		io.ConfigWindowsResizeFromEdges = true;
-		io.IniFilename = "IW3xRadiant\\imgui.ini";
+		io.IniFilename = "T5xRadiant\\imgui.ini";
 
 		// implementation
 		ImGui_ImplWin32_Init(cmainframe::activewnd->m_pZWnd->GetWindow());
@@ -478,7 +478,7 @@ namespace components
 				{
 					ImGuiToast toast(ImGuiToastType_Info, 2500);
 					toast.set_title("Snapshot created");
-					toast.set_content(R"(D:\COD4Modtools\map_source\snapshots\mp_bsptest.map.5)");
+					toast.set_content(R"(D:\BO1Modtools\map_source\snapshots\mp_bsptest.map.5)");
 
 					ImGui::InsertNotification(toast);
 				}

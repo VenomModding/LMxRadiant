@@ -1648,7 +1648,7 @@ namespace ggui
 		if (elem->elemType == fx_system::FX_ELEM_TYPE_MODEL)
 		{
 			MOD_CHECK(ImGui::Checkbox_FxElemFlag("Enable simulation (PhysX / ODE)", elem, fx_system::FX_ELEM_USE_MODEL_PHYSICS, &physx_enabled));
-			TT("This enables PhysX (in radiant) and the stock physics engine in cod4");
+			TT("This enables PhysX (in radiant) and the stock physics engine in bo1");
 		}
 
 		if (physx_enabled)

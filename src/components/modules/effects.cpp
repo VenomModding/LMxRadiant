@@ -726,7 +726,7 @@ namespace components
 			else
 			{
 				filepath = dvars::fs_homepath->current.string;
-				filepath += "\\IW3xRadiant\\createfx\\"s;
+				filepath += "\\T5xRadiant\\createfx\\"s;
 			}
 			
 

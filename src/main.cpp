@@ -24,7 +24,7 @@ __declspec(naked) void entry_point()
         call main::initialize
 
 		// same address as entry_point_hook.initialize
-        mov eax, 5C4299h
+        mov eax, 5D92E3h
         jmp eax
     }
 }
@@ -34,12 +34,12 @@ BOOL APIENTRY DllMain(HMODULE /*hModule*/, DWORD  ul_reason_for_call, LPVOID /*l
 	if (ul_reason_for_call == DLL_PROCESS_ATTACH)
 	{
 		DWORD oldProtect;
-		VirtualProtect(GetModuleHandle(nullptr), 0x234D000, PAGE_EXECUTE_READWRITE, &oldProtect); // find this with CFF Explorer - Optinal Headers - SizeOfImage
+		VirtualProtect(GetModuleHandle(nullptr), 0x257A000, PAGE_EXECUTE_READWRITE, &oldProtect); // find this with CFF Explorer - Optinal Headers - SizeOfImage
 
 		Beep(523, 100);
 
 		// Adress is the entry adress found in IDA under Exports
-		main::entry_point_hook.initialize(0x5C4299, entry_point)->install();
+		main::entry_point_hook.initialize(0x5D92E3, entry_point)->install(); //This is the entry point for the Linkermod Bo1 Radiant
 	}
 
 	else if (ul_reason_for_call == DLL_PROCESS_DETACH)

@@ -62,14 +62,14 @@ If you want to buy me a coffee:
 ___
 <br>
 
-### New features not found within the original cod4 radiant:
+### New features not found within the original bo1 radiant:
 + completely revamped user interface with docking, tabs, saved layouts and more (Dear ImGui)
 + [play](https://xoxor4d.github.io/tutorials/iw3xradiant-using-effects/) && [edit / create](https://xoxor4d.github.io/tutorials/iw3xradiant-effects-editor/) && [export effects as CreateFX](https://xoxor4d.github.io/tutorials/iw3xradiant-createfx/) files right from within radiant (__makes effectsEd completely obsolete__)
 + Nvidia PhysX integration for [dynamic placement of prefabs](https://xoxor4d.github.io/tutorials/iw3xradiant-physx-prefabs) or [physics-enabled effects](https://xoxor4d.github.io/tutorials/iw3xradiant-physx-effects) (can be turned into misc_models)
-+ Nvidia PhysX enabled character movement with cod4 movement mechanics (bouncing) [character movement](https://xoxor4d.github.io/tutorials/iw3xradiant-physx-movement)
++ Nvidia PhysX enabled character movement with bo1 movement mechanics (bouncing) [character movement](https://xoxor4d.github.io/tutorials/iw3xradiant-physx-movement)
 + [d3dbsp loading](https://xoxor4d.github.io/tutorials/iw3xradiant-d3dbsp) and bsp/light compilation from within radiant
 + [automatically generate reflections](https://xoxor4d.github.io/tutorials/iw3xradiant-d3dbsp-reflections) within radiant when compiling the maps bsp
-+ [live link](https://xoxor4d.github.io/tutorials/iw3xradiant-livelink) (sync. brushes (with collision), camera and worldspawn settings between cod4 and radiant)
++ [live link](https://xoxor4d.github.io/tutorials/iw3xradiant-livelink) (sync. brushes (with collision), camera and worldspawn settings between bo1 and radiant)
 + [mesh painting](https://xoxor4d.github.io/tutorials/iw3xradiant-mesh-painting) (xmodels/prefabs) with per object settings, random size, angles, weight etc.
 + 3D guizmo to precisely manipulate entities and brushes from the camera window (ImGuizmo)
 + a prefab browser with the ability to generate thumbnails + drag and drop prefabs into the scene
@@ -112,12 +112,12 @@ ___
 
 <br>
 
-1. Install the CoD4 Modtools
+1. Install the bo1 Modtools
 2. Download the latest [release](https://github.com/xoxor4d/iw3xo-radiant/releases)
-3. Copy the contents into your cod4 root directory
-4. Start `bin/IW3xRadiant.exe`
+3. Copy the contents into your bo1 root directory
+4. Start `bin/T5xRadiant.exe`
 
-- [NIGHTLY]&ensp; &ensp; install latest release, download nightly, unpack and replace `iw3r.dll` within the `bin` folder  
+- [NIGHTLY]&ensp; &ensp; install latest release, download nightly, unpack and replace `t5xr.dll` within the `bin` folder  
   &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; -> check for additional assets in the __#nightly-builds__ channel (📍) on the [iw3xo discord](https://discord.gg/t5jRGbj)
 - [OPTIONAL]&ensp; __bo3-tool-textures.zip__ (unpack and place `.iwi's` into `bin\IW3xRadiant\images`)
 
@@ -130,14 +130,14 @@ ___
 
 ### How to build / compile the project using Visual Studio
 1. Clone the repo! __(zip does not include deps!)__
-2. Copy everything within the assets folder into your cod4-root folder
+2. Copy everything within the assets folder into your bo1-root folder
 3. Use __update_submodules.bat__ to update submodules
 4. Use __generate-buildfiles.bat__ to build project files with premake
 5. Load the solution `(build/iw3xo-radiant.sln)` and open the iw3r project-settings to setup paths:
-> - General &ensp; &ensp; &ensp; output directory path -> `path-to-cod4-root\bin\`
-> - Debugging &ensp; command -> `path-to-cod4-root\bin\IW3xRadiant.exe`
-> - Debugging &ensp; working directory -> `path-to-cod4-root\bin\`
-> + Preferred: Create a new environment variable called `COD4_ROOT` that points to your cod4 directory and re-generate the project files.  
+> - General &ensp; &ensp; &ensp; output directory path -> `path-to-bo1-root\bin\`
+> - Debugging &ensp; command -> `path-to-bo1-root\bin\T5xRadiant.exe`
+> - Debugging &ensp; working directory -> `path-to-bo1-root\bin\`
+> + Preferred: Create a new environment variable called `BO1_ROOT` that points to your bo1 directory and re-generate the project files.  
 6. Build -> Build Solution or run with debugger  
 
 <br>
@@ -145,18 +145,18 @@ ___
 ### How to build the project using VSCode
 1. Install C++ Build tools (msbuild)
 2. Add msbuild folder to the "PATH" environment variable:
-> `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin`
-3. Add `COD4_ROOT` environment variable with path to your cod4 directory 
-> `"COD4_ROOT" "D:\COD4-Modtools"`
+> `%ProgramFiles(x86)%\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin`
+3. Add `BO1_ROOT` environment variable with path to your bo1 directory 
+> `"BO1_ROOT" "D:\BO1-Modtools"`
 4. Clone the repo (zip does not include deps!)
-5. Copy everything within the assets folder into your cod4-root folder
+5. Copy everything within the assets folder into your bo1-root folder
 6. Drag and drop all files from `.vscode/tracked\` into `.vscode\`
-7. Open __iw3xo-radiant.code-workspace__ 
+7. Open __t5xo-radiant.code-workspace__ 
 8. Run task: `update_submodules` or open __update_submodules.bat__
 9. Run task: `generate-buildfiles` or open __generate-buildfiles.bat__
 
-Use provided build-tasks with the option to copy `iw3r.dll` and `iw3r.pdb` to `%COD4_ROOT%/bin`  
-__Run->Start Debugging__ will build and copy a debug build to to `%COD4_ROOT%/bin` and launch IW3xRadiant.
+Use provided build-tasks with the option to copy `t5xr.dll` and `t5xr.pdb` to `%BO1_ROOT%/bin`  
+__Run->Start Debugging__ will build and copy a debug build to to `%BO1_ROOT%/bin` and launch T5xRadiant.
 
 <br>
 
@@ -164,7 +164,8 @@ ___
 
 <br>
 
-### Optional:  
+### Optional: 
+ 
 https://github.com/xoxor4d/iw3xo-dev
 
 ### Project Page:  
@@ -210,7 +211,7 @@ ___
 ### Effect Browser and Playback
 ![image](readme/feat_effect_browser.gif)
 
-### In-Editor cod4 based movement with bouncing :>
+### In-Editor bo1 based movement with bouncing :>
 ![image](readme/feat_movement.gif)
 <br>
 

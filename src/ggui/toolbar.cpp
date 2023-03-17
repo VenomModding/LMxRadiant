@@ -1144,7 +1144,7 @@ namespace ggui
 
 			
 			std::string ini_path = fs_homepath->current.string;
-						ini_path += "\\IW3xRadiant\\" + TB_INI_FILENAME;
+						ini_path += "\\T5xRadiant\\" + TB_INI_FILENAME;
 
 			std::ifstream ini;
 			ini.open(ini_path.c_str());
@@ -1260,7 +1260,7 @@ namespace ggui
 		{
 			std::ofstream ini;
 			std::string ini_path = fs_homepath->current.string;
-						ini_path += "\\IW3xRadiant\\" + TB_INI_FILENAME;
+						ini_path += "\\T5xRadiant\\" + TB_INI_FILENAME;
 
 			ini.open(ini_path.c_str());
 			if (!ini.is_open())

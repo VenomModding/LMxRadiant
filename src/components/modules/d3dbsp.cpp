@@ -747,7 +747,7 @@ namespace components
 	/**
 	 * @brief					run batch to compile bsp
 	 * @param bsp_name			plain map name with no extension or pathing
-	 * @param generate_createfx	automatically generate createfx files + place into raw instead of bin/IW3xRadiant
+	 * @param generate_createfx	automatically generate createfx files + place into raw instead of bin/T5xRadiant
 	 */
 	void d3dbsp::compile_bsp(const std::string& bsp_name, bool generate_createfx)
 	{
@@ -780,7 +780,7 @@ namespace components
 		std::string args;
 
 		// launch arg
-		args += R"(")"s + base_path + R"(\bin\IW3xRadiant\batch\compile_bsp.bat")"s + " ";
+		args += R"(")"s + base_path + R"(\bin\T5xRadiant\batch\compile_bsp.bat")"s + " ";
 
 		// bsppath
 		args += R"(")"s + base_path + (is_mp ? R"(\raw\maps\mp\")"s : R"(\raw\maps\")"s) + " "s;

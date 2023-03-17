@@ -102,7 +102,7 @@ bool on_exit_instance()
 void registery_save([[maybe_unused]] CPrefsDlg* prefs)
 {
 	const auto state = afx::get_module_state();
-	CWinApp_WriteProfileInt(state->m_pCurrentWinApp, "Prefs", "iw3x_mainframe_menubar_enabled", ggui::mainframe_menubar_enabled);
+	CWinApp_WriteProfileInt(state->m_pCurrentWinApp, "Prefs", "t5x_mainframe_menubar_enabled", ggui::mainframe_menubar_enabled);
 	CWinApp_WriteProfileInt(state->m_pCurrentWinApp, "Prefs", "lights_max_intensity", game::g_qeglobals->preview_at_max_intensity);
 	CWinApp_WriteProfileInt(state->m_pCurrentWinApp, "Prefs", "force_zero_dropheight", prefs->m_bForceZeroDropHeight);
 	CWinApp_WriteProfileInt(state->m_pCurrentWinApp, "Prefs", "discord_rpc", components::discord::g_enable_discord_rpc);
@@ -111,7 +111,7 @@ void registery_save([[maybe_unused]] CPrefsDlg* prefs)
 void registery_load()
 {
 	const auto state = afx::get_module_state();
-	ggui::mainframe_menubar_enabled = CWinApp_GetProfileIntA(state->m_pCurrentWinApp, "Prefs", "iw3x_mainframe_menubar_enabled", 0);
+	ggui::mainframe_menubar_enabled = CWinApp_GetProfileIntA(state->m_pCurrentWinApp, "Prefs", "t5x_mainframe_menubar_enabled", 0);
 
 	// always bothered me ..
 	game::g_qeglobals->preview_at_max_intensity = CWinApp_GetProfileIntA(state->m_pCurrentWinApp, "Prefs", "lights_max_intensity", 0);
@@ -147,7 +147,7 @@ BOOL LoadRegistryInfo(const char* pszName, void* pvBuf, long* plSize)
 	}
 	else
 	{
-		RegOpenKeyExA(HKEY_CURRENT_USER, "Software\\iw\\IW3xRadiant\\IW3xRadiant", 0, KEY_READ, &hKey);
+		RegOpenKeyExA(HKEY_CURRENT_USER, "Software\\iw\\T5xRadiant\\T5xRadiant", 0, KEY_READ, &hKey);
 	}
 
 	RegQueryValueExA(hKey, pszName, NULL, (unsigned long*)&lType, (unsigned char*)pvBuf, (unsigned long*)plSize);
@@ -424,11 +424,11 @@ void radiantapp::hooks()
 	// show/hide mainframe menubar on startup 03 :: CMainFrame::OnCreate
 	utils::hook(0x421057, menubar_stub_03, HOOK_JUMP).install()->quick();
 
-	// do not use or overwrite stock radiant registry keys - create seperate ones for IW3xRadiant
-	utils::hook::write_string(0x6EBA58, R"(Software\iw\IW3xRadiant\IW3xRadiant)"s);
-	utils::hook::write_string(0x6E2320, R"(iw\IW3xRadiant)"s);
-	utils::hook::write_string(0x6E22F0, R"(Software\iw\IW3xRadiant\IniPrefs)"s);
-	utils::hook::write_string(0x6DC1EC, R"(Software\iw\IW3xRadiant\MRU)"s);
+	// do not use or overwrite stock radiant registry keys - create seperate ones for T5xRadiant
+	utils::hook::write_string(0x6EBA58, R"(Software\iw\T5xRadiant\T5xRadiant)"s);
+	utils::hook::write_string(0x6E2320, R"(iw\T5xRadiant)"s);
+	utils::hook::write_string(0x6E22F0, R"(Software\iw\T5xRadiant\IniPrefs)"s);
+	utils::hook::write_string(0x6DC1EC, R"(Software\iw\T5xRadiant\MRU)"s);
 
 #ifdef HIDE_MAINFRAME_MENUBAR
 	// -----------------------------------------------------------------------

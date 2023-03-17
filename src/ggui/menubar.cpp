@@ -174,7 +174,7 @@ namespace ggui
 					{
 						components::effects::generate_createfx();
 
-					} TT("Generate createfx files for current map.\n (bin\\IW3xRadiant\\createfx)");
+					} TT("Generate createfx files for current map.\n (bin\\T5xRadiant\\createfx)");
 					
 					if (ImGui::MenuItem("Pointfile")) {
 						mainframe_cdeclcall(void, 0x423B20); //cmainframe::OnPointfileOpen

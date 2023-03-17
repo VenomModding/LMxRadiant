@@ -47,8 +47,8 @@ jobs:
         with:
           name: ${{matrix.configuration}} binaries
           path: |
-            build/bin/${{matrix.configuration}}/iw3r.dll
-            build/bin/${{matrix.configuration}}/iw3r.pdb
+            build/bin/${{matrix.configuration}}/t5xr.dll
+            build/bin/${{matrix.configuration}}/t5xr.pdb
             build/bin/${{matrix.configuration}}/PhysX_32.dll
             build/bin/${{matrix.configuration}}/PhysXCommon_32.dll
             build/bin/${{matrix.configuration}}/PhysXCooking_32.dll

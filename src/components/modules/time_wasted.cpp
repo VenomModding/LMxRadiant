@@ -22,7 +22,7 @@ namespace components
 	void time_wasted::write_entries_to_file()
 	{
 		std::ofstream file;
-		if (utils::fs::write_file_homepath("IW3xRadiant", "time_wasted.ini", false, file))
+		if (utils::fs::write_file_homepath("T5xRadiant", "time_wasted.ini", false, file))
 		{
 			for (const auto& entry : m_entries)
 			{
@@ -38,7 +38,7 @@ namespace components
 		m_entries.clear();
 
 		std::ifstream file;
-		if (utils::fs::open_file_homepath("IW3xRadiant", "time_wasted.ini", false, file))
+		if (utils::fs::open_file_homepath("T5xRadiant", "time_wasted.ini", false, file))
 		{
 			std::string input;
 			std::vector<std::string> args;

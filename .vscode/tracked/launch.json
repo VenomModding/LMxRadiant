@@ -8,10 +8,10 @@
             "name": "(Windows) Start",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "IW3xRadiant.exe",
+            "program": "T5xRadiant.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${env:COD4_ROOT}\\bin",
+            "cwd": "${env:BO1_ROOT}\\bin",
             "environment": [],
             "preLaunchTask": "debug-build-copy"
         }

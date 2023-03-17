@@ -114,7 +114,7 @@ namespace components
 				// take screenshot
 
 				std::string file_path = game::Dvar_FindVar("fs_homepath")->current.string;
-							file_path += R"(\IW3xRadiant\prefab_thumbs\)";
+							file_path += R"(\T5xRadiant\prefab_thumbs\)";
 
 				auto thumbnail_str = GET_GUI(ggui::prefab_preview_dialog)->get_thumbnail_string(rel_path.has_parent_path() ? rel_path.parent_path() : "", rel_path.filename().string());
 					 thumbnail_str += ".jpg";

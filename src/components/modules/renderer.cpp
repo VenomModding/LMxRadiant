@@ -451,9 +451,9 @@ namespace components
 		sprintf_s(shader_path, 260u, "%s/raw/shader_bin/%s_%8.8x", game::Dvar_FindVar("fs_basepath")->current.string, prefix_str, shader_hash);
 		if (!r_load_shader_programm(&shader_len, &chachedShader, shader_path))
 		{
-			// look for addon shaders in bin/IW3xRadiant/shader_bin
+			// look for addon shaders in bin/T5xRadiant/shader_bin
 			memset(&shader_path, 0, sizeof(shader_path));
-			sprintf_s(shader_path, 260u, "%s/bin/IW3xRadiant/shader_bin/%s_%8.8x", game::Dvar_FindVar("fs_basepath")->current.string, prefix_str, shader_hash);
+			sprintf_s(shader_path, 260u, "%s/bin/T5xRadiant/shader_bin/%s_%8.8x", game::Dvar_FindVar("fs_basepath")->current.string, prefix_str, shader_hash);
 
 			if (!r_load_shader_programm(&shader_len, &chachedShader, shader_path))
 			{
@@ -1202,7 +1202,7 @@ namespace components
 		}
 	}
 
-	// return handle for loaded technique, loads new technique from "raw/techniques" or "bin/IW3xRadiant/techniques" otherwise
+	// return handle for loaded technique, loads new technique from "raw/techniques" or "bin/T5xRadiant/techniques" otherwise
 	game::MaterialTechnique* Material_RegisterTechnique(const char* name /*eax*/, int is_renderer_in_use /*edi*/)
 	{
 		const static uint32_t func_addr = 0x519790;
@@ -2032,7 +2032,7 @@ namespace components
 			if (dvars::fs_homepath)
 			{
 				std::string filePath = dvars::fs_homepath->current.string;
-							filePath += "\\IW3xRadiant\\LOG_rendercommands.txt"s;
+							filePath += "\\T5xRadiant\\LOG_rendercommands.txt"s;
 
 				log_file.open(filePath.c_str());
 				if (!log_file.is_open())

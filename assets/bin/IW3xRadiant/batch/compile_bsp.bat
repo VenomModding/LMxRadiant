@@ -38,7 +38,7 @@ if "%compileBSP%" == "1" (
 	echo.
 	
 	copy "%mapsourcepath%%mapname%.map" "%bsppath%%mapname%.map"
-	"%treepath%bin\cod4map" -platform pc -loadFrom "%mapsourcepath%%mapname%.map" %parmBSPOptions% "%bsppath%%mapname%"
+	"%treepath%bin\bo1map" -platform pc -loadFrom "%mapsourcepath%%mapname%.map" %parmBSPOptions% "%bsppath%%mapname%"
 )
 
 if "%compileLight%" == "1" (
@@ -47,7 +47,7 @@ if "%compileLight%" == "1" (
 	echo.
 
 	IF EXIST "%mapsourcepath%%mapname%.grid"	copy "%mapsourcepath%%mapname%.grid" "%bsppath%%mapname%.grid"
-	"%treepath%bin\cod4rad" -platform pc %parmLightOptions% "%bsppath%%mapname%"
+	"%treepath%bin\bo1rad" -platform pc %parmLightOptions% "%bsppath%%mapname%"
 )
 
 IF EXIST "%bsppath%%mapname%.map"	del "%bsppath%%mapname%.map"
