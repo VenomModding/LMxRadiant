@@ -600,7 +600,7 @@ void __declspec(naked) czwindowproc_stub()
 
 __declspec(naked) void set_czwnd_style()
 {
-	const static uint32_t retn_pt = 0x46F394;
+	const static uint32_t retn_pt = 0x488FD9;
 	__asm
 	{
 		mov     dword ptr[eax + 20h], WS_CLIPCHILDREN | WS_CLIPSIBLINGS | WS_VISIBLE | WS_CHILD;
@@ -614,8 +614,8 @@ __declspec(naked) void set_czwnd_style()
 void czwnd::hooks()
 {
 	// change window style -> child window
-	utils::hook::nop(0x46F38B, 9);
-		 utils::hook(0x46F38B, set_czwnd_style, HOOK_JUMP).install()->quick();
+	utils::hook::nop(0x488FAA, 9);
+		 utils::hook(0x488FAA, set_czwnd_style, HOOK_JUMP).install()->quick();
 
 	// disable z-drawing in on_paint
 	utils::hook::nop(0x46EF23, 5);

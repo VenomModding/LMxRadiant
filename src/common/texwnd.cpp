@@ -534,5 +534,5 @@ void ctexwnd::hooks()
 
 	// replace $default material with caulk
 	const char* replace_with_caulk = "caulk";
-	utils::hook::set<DWORD*>(0x45D154 + 1, (DWORD*)replace_with_caulk);
+	utils::hook::set<DWORD*>(0x4756EF + 1, (DWORD*)replace_with_caulk);
 }

@@ -599,8 +599,8 @@ namespace components
 
 	__declspec(naked) void on_map_load_stub()
 	{
-		const static uint32_t func_addr = 0x485E50;
-		const static uint32_t retn_addr = 0x4866BD;
+		const static uint32_t func_addr = 0x49F610;
+		const static uint32_t retn_addr = 0x4A1432;
 		__asm
 		{
 			pushad;
@@ -921,7 +921,7 @@ namespace components
 	gui::gui()
 	{
 		// show external console on map load
-		utils::hook(0x4866B8, on_map_load_stub, HOOK_JUMP).install()->quick();
+		utils::hook(0x4A1415, on_map_load_stub, HOOK_JUMP).install()->quick();
 
 		// add snapshot toast
 		utils::hook::nop(0x48B38B, 6); utils::hook(0x48B38B, map_snapshot_toast_stub, HOOK_JUMP).install()->quick();

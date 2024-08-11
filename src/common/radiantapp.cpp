@@ -250,7 +250,7 @@ void MFCCreate()
 
 __declspec(naked) void on_init_radiant_instance_stub()
 {
-	const static uint32_t retn_addr = 0x450735;
+	const static uint32_t retn_addr = 0x467FD7;
 	__asm
 	{
 		push    ecx; // og
@@ -388,7 +388,7 @@ __declspec(naked) void menubar_stub_03()
 void radiantapp::hooks()
 {
 	// force global preferences on init (CRadiantApp::InitInstance)
-	utils::hook(0x450730, on_init_radiant_instance_stub, HOOK_JUMP).install()->quick();
+	utils::hook(0x467FD2, on_init_radiant_instance_stub, HOOK_JUMP).install()->quick();
 
 	// stub after FS-dvars are registered (QE_LoadProject)
 	utils::hook(0x48BCED, on_load_project_stub, HOOK_JUMP).install()->quick();
@@ -425,10 +425,10 @@ void radiantapp::hooks()
 	utils::hook(0x421057, menubar_stub_03, HOOK_JUMP).install()->quick();
 
 	// do not use or overwrite stock radiant registry keys - create seperate ones for IW3xRadiant
-	utils::hook::write_string(0x6EBA58, R"(Software\iw\IW3xRadiant\IW3xRadiant)"s);
-	utils::hook::write_string(0x6E2320, R"(iw\IW3xRadiant)"s);
-	utils::hook::write_string(0x6E22F0, R"(Software\iw\IW3xRadiant\IniPrefs)"s);
-	utils::hook::write_string(0x6DC1EC, R"(Software\iw\IW3xRadiant\MRU)"s);
+	utils::hook::write_string(0x6F8688, R"(Software\iw\T5xoRadiant\T5xoRadiant)"s);
+	utils::hook::write_string(0x6F0D08, R"(iw\T5xoRadiant)"s);
+	utils::hook::write_string(0x6F0CD0, R"(Software\iw\T5xoRadiant\IniPrefs)"s);
+	utils::hook::write_string(0x6EC300, R"(Software\iw\T5xoRadiant\MRU)"s);
 
 #ifdef HIDE_MAINFRAME_MENUBAR
 	// -----------------------------------------------------------------------

@@ -202,7 +202,7 @@ namespace game
 
 	CPrefsDlg* g_PrefsDlg()
 	{
-		const auto prefs = reinterpret_cast<CPrefsDlg*>(*(DWORD*)0x73C704);
+		const auto prefs = reinterpret_cast<CPrefsDlg*>(*(DWORD*)0x74CD1C);
 		return prefs;
 	}
 
@@ -1511,7 +1511,7 @@ namespace game
 			pushad;
 
 			mov ebx, [esp + 28h];
-			mov eax, 0x4B0F00; // Dvar_FindMalleableVar Addr.
+			mov eax, 0x4CB280; // Dvar_FindMalleableVar Addr.
 			call eax;
 
 			mov[esp + 20h], eax;

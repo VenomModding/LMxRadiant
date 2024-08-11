@@ -9,27 +9,27 @@ namespace components
 	{
 		loader::mem_allocator_.clear();
 
-		loader::_register(new command());
-		loader::_register(new config());
-		loader::_register(new d3d9ex());
-		loader::_register(new d3dbsp());
-		loader::_register(new discord());
-		loader::_register(new effects());
-		loader::_register(new effects_editor());
-		loader::_register(new exec());
-		loader::_register(new gameview());
-		loader::_register(new generate_previews());
+		// loader::_register(new command());
+		// loader::_register(new config());
+		// loader::_register(new d3d9ex());
+		// loader::_register(new d3dbsp());
+		// loader::_register(new discord());
+		// loader::_register(new effects());
+		// loader::_register(new effects_editor());
+		// loader::_register(new exec());
+		// loader::_register(new gameview());
+		// loader::_register(new generate_previews());
 		loader::_register(new gui());
-		loader::_register(new main_module());
-		loader::_register(new mesh_painter());
-		loader::_register(new patches());
-		loader::_register(new physx_impl());
-		loader::_register(new pmesh());
-		loader::_register(new process());
-		loader::_register(new reflectionprobes());
-		loader::_register(new renderer());
-		loader::_register(new remote_net());
-		loader::_register(new time_wasted());
+		// loader::_register(new main_module());
+		// loader::_register(new mesh_painter());
+		// loader::_register(new patches());
+		// loader::_register(new physx_impl());
+		// loader::_register(new pmesh());
+		// loader::_register(new process());
+		// loader::_register(new reflectionprobes());
+		// loader::_register(new renderer());
+		// loader::_register(new remote_net());
+		// loader::_register(new time_wasted());
 
 		if(const auto	con = GET_GUI(ggui::console_dialog);
 						con)
